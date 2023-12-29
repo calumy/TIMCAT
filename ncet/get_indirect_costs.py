@@ -68,7 +68,7 @@ def get_indirect_costs(dfNewPlant, plant_characteristics, learning_rate, scalars
     )  # 1058 comes from the EEDB average 12.1 million hours over 72 months, setting the max =1, assuming the BE plant was peak efficiency in staffing
     mult_constructionTime = np.max(
         [1, construction_months / 72]
-    )  # the PWR12 better experience from EEDB took 72 months to build, assume there isnt a gain for shorter construction here
+    )  # the PWR12 better experience from EEDB took 72 months to build, assume there isn't a gain for shorter construction here
     print("Construction duration is {:.0F}".format(construction_months))
     print("Total direct labor hours is {:.0F}".format(total_direct_labor_hours))
 

@@ -32,7 +32,7 @@ class scheduler:
         self.T = 250  # define max number of months
         df["Start"] = self.T  # all accounts start at the end until launched
 
-        # Create an integer index arrary of the dependencies
+        # Create an integer index array of the dependencies
         df["num"] = df.index.values
         dep = df["Dependency 1"].values
         df.set_index("Account", inplace=True)

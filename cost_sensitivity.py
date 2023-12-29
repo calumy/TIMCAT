@@ -314,7 +314,7 @@ def run_ncet(
                     + ".csv"
                 )
 
-    # Save all the output dictionaries from montecarlo
+    # Save all the output dictionaries from monte carlo
     if mc_runs != 1:
         for i, dict_list in enumerate(mc_dict_list):
             pd.DataFrame(dict_list).to_csv(

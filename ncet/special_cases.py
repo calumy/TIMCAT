@@ -5,7 +5,7 @@ import pdb
 def cost_multipliers(scaling_table, scalars_dict, plant_characteristics):
     # Some of the scalars dict have a key word to indicate how to apply them
 
-    # Simplication scalars
+    # Simplification scalars
     if plant_characteristics["Gen III+ or later"]:
         simple_keys = [x for x in scalars_dict.keys() if "[Simple]" in x]
         for simple_key in simple_keys:
@@ -144,7 +144,7 @@ def special_cases(dfNewPlant, plant_characteristics, scalars_dict):
         dfNewPlant.loc[
             idx_formwork, (costs + hours)
         ] *= work_reduction  # formwork becomes half or fully free
-        dfNewPlant.loc[idx_cadwelds, (costs + hours)] = 0.0  # no cadwelding with spc
+        dfNewPlant.loc[idx_cadwelds, (costs + hours)] = 0.0  # no cad welding with spc
 
         newPlant_superArea = plant_characteristics["SPC Area"][i]
         dfNewPlant.loc[
@@ -237,7 +237,7 @@ def special_cases(dfNewPlant, plant_characteristics, scalars_dict):
         dfNewPlant.loc[idx_rcp, (costs + hours)] = 0.0
         dfNewPlant.loc[idx_mse, (costs + hours)] = 0.0
 
-    # ---------------------------------------------Advanced manufacturing or intregal RPV------------------------------------------------#
+    # ---------------------------------------------Advanced manufacturing or integral RPV------------------------------------------------#
 
     if plant_characteristics["RPV thickness (m)"] <= 0.11:
         # EPRI can E-beam weld (and do other things to) your vessel reducing cost ~40%

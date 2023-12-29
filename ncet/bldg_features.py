@@ -8,7 +8,7 @@ def get_bldg(aux, dimensions):
     tf = aux["Foundation thickness (meters)"]
     tw = aux["Superstructure thickness (meters)"]
 
-    # -----Superstucture-----
+    # -----Superstructure-----
     superArea = {
         "Cylinder": lambda d, h, u: np.pi * d * h,  # u for unused
         "Rectangular": lambda x, y, h: x * h * 2 + y * h * 2,
