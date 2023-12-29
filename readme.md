@@ -7,7 +7,7 @@ Citation: Stewart W.R., Shirvan K., "Capital cost estimation for advanced nuclea
 For more info and access to other already modeled plants contact: Prof. Koroush Shirvan kshirvan@mit.edu
 
 ## Acknowledgements
-This work has been primarily supported by Fortum, www.fortum.com. 
+This work has been primarily supported by Fortum, www.fortum.com.
 
 Partial financial support by Department of Energy: Nuclear Energy University Program (DOE-NE0008989), ARC-20 (DE-NE0009049) and ARPA-E (DEAR0000978) and by Électricité De France (EDF).
 
@@ -36,7 +36,7 @@ To update, simply reinstall with pip from the TIMCAT directory:
 
 ## Usage
 As configured, TIMCAT is run by editing input files and their names in cost_sensitivity.py and running
-cost_sensitivity.py. 
+cost_sensitivity.py.
 
 You must specify the basis table, and the input files. Edit these lines in cost_sensitivity.py:
 
@@ -53,10 +53,10 @@ plant_fname = "inputfile_" + plant + ".xlsx"
 This is the reference cost data for the PWR12-ME plant. Costs were inflated from 1987 USD in EEDB to 2018 USD.
 
 #### "inputfile_PWR12ME.xlsx"
-This is the input file template for estimating the costs of a new plant. There are 9 tabs: 6 for direct cost categories, 1 for learning inputs, 1 for modularization inputs, and 1 for general plant characteristics. 
+This is the input file template for estimating the costs of a new plant. There are 9 tabs: 6 for direct cost categories, 1 for learning inputs, 1 for modularization inputs, and 1 for general plant characteristics.
 
 #### "input_scaling_exponents.xlsx"
-This is the input file for the cost scaling model parameters. The reference values are recommended, but the user is welcome to use their own parameters. 
+This is the input file for the cost scaling model parameters. The reference values are recommended, but the user is welcome to use their own parameters.
 
 #### "input_LaborIndices.csv", "input_MaterialIndices.csv", "input_CostOverrun.csv"
 These were the scaling matrices used to escalate the EEDB reference costs from 1987 to 2018 USD, and from the PWR12-BetterExperience to the PWR12-Median Experience. They are not called explicitly in the code, except the labor indices are called if steel plate composites are used. Future additions to the code that include new cost items can use this as a sample template.
